@@ -27,7 +27,6 @@ class GameLogic {
     }
 
     private Shape determineWinnerShape(Shape shapeOne, Shape shapeTwo) {
-
         switch (shapeOne) {
             case ROCK: {
                 if (shapeTwo.equals(Shape.PAPER)) {return Shape.PAPER;}
@@ -41,9 +40,8 @@ class GameLogic {
                 if (shapeTwo.equals(Shape.ROCK)) {return Shape.ROCK;}
                 if (shapeTwo.equals(Shape.PAPER)) {return Shape.SCISSORS;}
             }
+            default:
+                return null;
         }
-
-        // code bellow should never be reached
-        return null;
     }
 }
